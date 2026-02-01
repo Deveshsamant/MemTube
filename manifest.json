@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "MemTube",
+  "version": "1.0",
+  "description": "Remember where you left off on YouTube videos.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/watch*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "author": "Devesh Samant"
+}
